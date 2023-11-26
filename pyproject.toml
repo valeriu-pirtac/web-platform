@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "wplt"
+version = "0.1.0"
+description = "Web Platform Application"
+authors = ["Valeriu Pirtac <valeriu-pirtac@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "wplt", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+uvicorn = { extras = ["standard"], version = "^0.24.0.post1" }
+
+
+[tool.poetry.group.dev.dependencies]
+fastapi = "^0.104.1"
+sqlalchemy = "^2.0.23"
+pydantic = {extras = ["email"], version = "^2.5.2"}
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.4.3"
+
+[tool.pylint]
+disable = ["C0114", "C0115", "C0116"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
