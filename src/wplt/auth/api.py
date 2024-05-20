@@ -2,9 +2,7 @@ from fastapi import Depends
 from fastapi.routing import APIRouter
 from fastapi.security import OAuth2PasswordRequestForm
 
-from wplt.config import API_PREFIX
-
-router = APIRouter(prefix=f"{API_PREFIX}/auth", tags=["AUTH"])
+router = APIRouter(prefix="/auth", tags=["AUTH"])
 
 
 @router.post("/token")
